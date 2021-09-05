@@ -9,5 +9,10 @@ struct Point {
 
 int main() {
     Point p {1, 2, 3, "foo"};
+    cout << p.x << ' ' << p.y << ' ' << p.z << endl;
+    /*
+        Below is the output: 
+        1 2 3
+    */
     return 0;
 }
