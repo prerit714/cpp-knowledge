@@ -12,13 +12,11 @@ int lower_bound_iter(int* v, int n, int tgt) {
     int low{0}, hi{n-1};
     while (low<hi) {
         int mid{low+(hi-low)/2};
-        if (v[mid]>=tgt) hi = mid;
+        if (v[mid]>=tgt) hi = mid; // v[mid]>tgt just becomes the upper_bound_iter
         else low = mid+1;
     }
     return low;
 }
-
-
 
 int main() {
     int v[] {2, 3, 4, 5, 7, 19, 32, 38, 39, 45, 99};
